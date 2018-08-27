@@ -15,7 +15,7 @@ First of all, import `short-crypt.min.js` into your HTML `head`.
 
 Then, create a `ShortCrypt` instance with a key (string).
 
-```html
+```javascript
 var sc = new ShortCrypt(key);
 ```
 
