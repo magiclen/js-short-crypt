@@ -4,7 +4,7 @@
   "description": "ShortCrypt is a very simple encryption library, which aims to encrypt any data into something random at first glance.",
   "main": "src/lib.js",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "mocha --require @babel/register --reporter spec",
     "build": "webpack --mode production",
     "dev": "webpack --mode development"
   },
@@ -24,6 +24,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "hi-base32": "^0.5.0",

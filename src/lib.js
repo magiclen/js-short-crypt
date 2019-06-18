@@ -1,6 +1,6 @@
-const Long = require('long');
-const base64 = require('hi-base64');
-const base32 = require('hi-base32');
+import Long from 'long';
+import base64 from 'hi-base64';
+import base32 from 'hi-base32';
 
 function stringToUtf8ByteArray(str) {
     let out = [], p = 0;
@@ -176,7 +176,7 @@ function decrypt_inner(base, data, hashed_key, output) {
     });
 }
 
-class ShortCrypt {
+export default class ShortCrypt {
     constructor(key) {
         let data = stringToUtf8ByteArray(key);
 
@@ -409,4 +409,4 @@ class ShortCrypt {
     }
 }
 
-module.exports = ShortCrypt;
+// module.exports = ShortCrypt;

@@ -1,7 +1,6 @@
-const expect = require('chai').expect;
+import {expect} from 'chai';
 
-const ShortCrypt = require('../src/lib');
-const Long = require('long');
+import ShortCrypt from '../src/lib';
 
 describe('Encryption', function() {
     it('should use `magickey` to encrypt `articles`', function() {
