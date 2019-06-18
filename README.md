@@ -1,0 +1,50 @@
+ShortCrypt
+====================
+
+ShortCrypt is a very simple encryption library, which aims to encrypt any data into something random at first glance.
+Even if these data are similar, the ciphers are still pretty different.
+The most important thing is that a cipher is only **4 bits** larger than its plaintext so that it is suitable for data used in an URL or a QR Code. Besides these, it is also an ideal candidate for serial number generation.
+
+## Usage for Browsers
+
+First of all, import `short-crypt.min.js` into your HTML `head`.
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/magiclen/js-short-crypt/dist/short-crypt.min.js"></script>
+```
+
+Then, create a `ShortCrypt` instance with a key (string).
+
+```javascript
+var sc = new ShortCrypt(key);
+```
+
+For encryption, you can choose to use one of these following methods:
+
+* `encrypt`: encrypts data to an object, a cipher separated into **base** and **body**
+* `encryptToURLComponent`: encrypts data to a string suitably concatenated with URLs
+* `encryptToQRCodeAlphanumeric`: encrypts data to a string with the compatibility with QR code alphanumeric mode
+
+Only a string or a byte array can be encrypted.
+
+```javascript
+var cipher1 = sc.encryptToURLComponent(plainText);
+var cipher2 = sc.encryptToQRCodeAlphanumeric(plainText);
+```
+
+For decryption, you can use `decrypt`, `decryptURLComponent`, or `decryptQRCodeAlphanumeric` method.
+
+```javascript
+var result1 = sc.decryptURLComponent(cipher1);
+var result2 = sc.decryptQRCodeAlphanumeric(cipher2);
+```
+
+## Components
+
+* [long.js](https://github.com/dcodeIO/long.js/)
+* [hi-base32](https://github.com/emn178/hi-base32)
+* [hi-base64](https://github.com/emn178/hi-base64)
+
+## License
+
+[MIT](LICENSE)

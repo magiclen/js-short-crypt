@@ -1,0 +1,37 @@
+{
+  "name": "short-crypt",
+  "version": "1.0.2",
+  "description": "ShortCrypt is a very simple encryption library, which aims to encrypt any data into something random at first glance.",
+  "main": "src/lib.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magiclen/js-short-crypt.git"
+  },
+  "keywords": [
+    "short-crypt"
+  ],
+  "author": "Magic Len",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magiclen/js-short-crypt/issues"
+  },
+  "homepage": "https://magiclen.org/short-crypt/",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "hi-base32": "^0.5.0",
+    "hi-base64": "^0.2.1",
+    "long": "^4.0.0",
+    "mocha": "^6.1.4",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  }
+}
