@@ -39,12 +39,6 @@ var result1 = sc.decryptURLComponent(cipher1);
 var result2 = sc.decryptQRCodeAlphanumeric(cipher2);
 ```
 
-## Components
-
-* [long.js](https://github.com/dcodeIO/long.js/)
-* [hi-base32](https://github.com/emn178/hi-base32)
-* [hi-base64](https://github.com/emn178/hi-base64)
-
 ## License
 
 [MIT](LICENSE)
