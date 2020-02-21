@@ -1,4 +1,5 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: './src/lib.js',
@@ -20,13 +21,20 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CleanWebpackPlugin()
+    ],
     optimization: {
-        minimizer: [new UglifyJsPlugin({
-            uglifyOptions: {
-                output: {
-                    comments: false,
-                },
-            },
-        })],
-    },
+        minimizer: [
+            new TerserPlugin({
+                cache: true,
+                parallel: true,
+                terserOptions: {
+                    output: {
+                        comments: false,
+                    }
+                }
+            })
+        ]
+    }
 };
