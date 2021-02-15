@@ -3,6 +3,7 @@
   "version": "1.0.8",
   "description": "ShortCrypt is a very simple encryption library, which aims to encrypt any data into something random at first glance.",
   "main": "src/lib.js",
+  "type": "module",
   "scripts": {
     "test": "mocha --require @babel/register --reporter spec",
     "build": "webpack --mode production",
